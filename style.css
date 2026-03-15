@@ -11,7 +11,10 @@
     --accent-glow: rgba(59, 130, 246, 0.4);
     
     --border-color: rgba(255, 255, 255, 0.08);
-    --nav-bg: rgba(9, 9, 11, 0.85);
+    --nav-bg: linear-gradient(120deg, rgba(15, 23, 42, 0.38), rgba(17, 24, 39, 0.32));
+    --nav-blend: linear-gradient(110deg, rgba(59, 130, 246, 0.16), rgba(236, 72, 153, 0.05) 55%, rgba(139, 92, 246, 0.14));
+    --nav-border: rgba(255, 255, 255, 0.1);
+    --nav-shadow: 0 6px 18px rgba(2, 6, 23, 0.18);
     --input-bg: rgba(39, 39, 42, 0.4);
 }
 
@@ -26,7 +29,10 @@ body.light-theme {
     --accent-glow: rgba(37, 99, 235, 0.3);
     
     --border-color: rgba(0, 0, 0, 0.06);
-    --nav-bg: rgba(192, 219, 239, 0.85);
+    --nav-bg: linear-gradient(120deg, rgba(232, 240, 248, 0.5), rgba(225, 236, 248, 0.44));
+    --nav-blend: linear-gradient(110deg, rgba(37, 99, 235, 0.13), rgba(125, 211, 252, 0.06) 55%, rgba(124, 58, 237, 0.09));
+    --nav-border: rgba(148, 163, 184, 0.24);
+    --nav-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
     --input-bg: rgba(255, 255, 255, 0.9);
 }
 
@@ -67,8 +73,34 @@ a { text-decoration: none; color: inherit; }
 .section-title { font-size: 2.5rem; margin-bottom: 2.5rem; display: inline-block; font-weight: 800; }
 
 /* Navbar */
-#navbar { position: fixed; top: 0; width: 100%; background: var(--nav-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); z-index: 1000; border-bottom: 1px solid var(--border-color); }
-.nav-content { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: var(--nav-bg);
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+    z-index: 1000;
+    border-bottom: 1px solid var(--nav-border);
+    box-shadow: var(--nav-shadow);
+    overflow: hidden;
+}
+#navbar::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--nav-blend);
+    opacity: 0.42;
+    pointer-events: none;
+}
+.nav-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
 .logo { 
     display: flex; 
     align-items: center; 
