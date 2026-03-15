@@ -26,7 +26,7 @@ body.light-theme {
     --accent-glow: rgba(37, 99, 235, 0.3);
     
     --border-color: rgba(0, 0, 0, 0.06);
-    --nav-bg: rgba(248, 250, 252, 0.85);
+    --nav-bg: rgba(192, 219, 239, 0.85);
     --input-bg: rgba(255, 255, 255, 0.9);
 }
 
@@ -69,7 +69,21 @@ a { text-decoration: none; color: inherit; }
 /* Navbar */
 #navbar { position: fixed; top: 0; width: 100%; background: var(--nav-bg); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); z-index: 1000; border-bottom: 1px solid var(--border-color); }
 .nav-content { display: flex; justify-content: space-between; align-items: center; height: 75px; }
-.logo { font-size: 1.8rem; font-weight: 800; }
+.logo { 
+    display: flex; 
+    align-items: center; 
+    font-size: 1.8rem; 
+    font-weight: 800;
+    transition: opacity 0.3s ease;
+}
+.logo:hover { opacity: 0.8; }
+.logo-img { 
+    border-radius: 10px;
+    height: 55px; 
+    width: auto; 
+    max-width: 150px;
+    object-fit: contain;
+}
 .nav-links { display: flex; align-items: center; list-style: none; gap: 2.5rem; font-weight: 500; }
 .nav-links a { position: relative; padding-bottom: 5px; }
 .nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background: var(--accent-main); transition: width 0.3s ease; }
