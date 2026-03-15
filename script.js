@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
     setTimeout(type, 1000); 
 });
 
+const body = document.body;
+
 // --- Scroll Animation (Intersection Observer) ---
 const observerOptions = { root: null, rootMargin: '0px', threshold: 0.1 };
 const observer = new IntersectionObserver((entries, observer) => {
@@ -53,29 +55,49 @@ const menuBtn = document.getElementById('menu-btn');
 const navLinks = document.getElementById('nav-links');
 const navItems = document.querySelectorAll('.nav-item'); 
 
+function openMenu() {
+    navLinks.classList.add('active');
+    body.classList.add('menu-open');
+    menuBtn.classList.add('active');
+    menuBtn.setAttribute('aria-expanded', 'true');
+    menuBtn.setAttribute('aria-label', 'Close menu');
+}
+
+function closeMenu() {
+    navLinks.classList.remove('active');
+    body.classList.remove('menu-open');
+    menuBtn.classList.remove('active');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.setAttribute('aria-label', 'Open menu');
+}
+
 menuBtn.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    const icon = menuBtn.querySelector('i');
-    if(navLinks.classList.contains('active')){
-        icon.classList.remove('fa-bars');
-        icon.classList.add('fa-xmark');
+    if (navLinks.classList.contains('active')) {
+        closeMenu();
     } else {
-        icon.classList.remove('fa-xmark');
-        icon.classList.add('fa-bars');
+        openMenu();
     }
 });
 
 navItems.forEach(item => {
-    item.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        menuBtn.querySelector('i').classList.replace('fa-xmark', 'fa-bars');
-    });
+    item.addEventListener('click', closeMenu);
+});
+
+document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navLinks.classList.contains('active')) {
+        closeMenu();
+    }
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && navLinks.classList.contains('active')) {
+        closeMenu();
+    }
 });
 
 // --- Theme Toggle Logic ---
 const themeToggleBtn = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
-const body = document.body;
 
 const savedTheme = localStorage.getItem('portfolio-theme');
 if (savedTheme === 'light') {
