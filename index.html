@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samrat Samanta | Mobile Application Developer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <nav id="navbar">
+        <div class="nav-content container">
+            <div class="logo">SS.</div>
+            
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#skills" class="nav-item">Skills</a></li>
+                <li><a href="#projects" class="nav-item">Projects</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" aria-label="Toggle Theme">
+                        <span id="theme-icon">☀️</span>
+                    </button>
+                </li>
+            </ul>
+
+            <div class="menu-btn" id="menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="container hidden">
+        <div class="hero-content">
+            <h1 class="gradient-animate">Samrat Samanta</h1>
+            <h2 id="typewriter"></h2>
+            <p>Bringing ideas to life through clean code, scalable architecture, and intuitive design.</p>
+            <div class="hero-links">
+                <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            </div>
+        </div>
+        
+        <div class="hero-image-wrapper">
+            <div class="phone-frame">
+                <div class="notch"></div>
+                <img src="image.jpeg" alt="Samrat Samanta" class="profile-img">
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="container hidden">
+        <h3 class="section-title gradient-animate">About Me</h3>
+        <div class="card glass-card">
+            <p class="about-text">
+                I am a 3rd-year B.Tech CSE student and a passionate Mobile Application Developer. As a coder and designer, I focus on building scalable mobile ecosystems and bridging technical development with user requirements. My expertise lies in Expo and React Native CLI, coupled with a strong project management background. I thrive in collaborative environments, committed to writing clean, maintainable code while rapidly adopting new frameworks.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="container hidden">
+        <h3 class="section-title gradient-animate">Technical Skills</h3>
+        <div class="skills-grid">
+            <span class="skill-tag">React Native CLI</span>
+            <span class="skill-tag">Expo</span>
+            <span class="skill-tag">Firebase</span>
+            <span class="skill-tag">GraphQL</span>
+            <span class="skill-tag">Strapi</span>
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">HTML & CSS</span>
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h3 class="section-title gradient-animate hidden">Featured Projects</h3>
+        <div class="projects-grid">
+            <div class="card glass-card hidden stagger-1">
+                <h4>BookMyDoc</h4>
+                <p class="subtitle">Full Stack Healthcare Appointment System</p>
+                <p>Architected a cross-platform mobile application using React Native (Expo) and Strapi, enabling real-time doctor availability tracking. Engineered a relational database schema in MySQL to manage complex data.</p>
+            </div>
+            <div class="card glass-card hidden stagger-2">
+                <h4>Message Me</h4>
+                <p class="subtitle">Real-Time Chat Application</p>
+                <p>Architected a high-performance communication layer using Firebase Firestore. Optimized asset delivery by integrating Cloudinary, reducing image load times and minimizing mobile data consumption.</p>
+            </div>
+            <div class="card glass-card hidden stagger-3">
+                <h4>Ed-Tech Learning Platform</h4>
+                <p class="subtitle">Educational Content Delivery</p>
+                <p>Developed a dynamic platform using React Native and Expo, leveraging HyGraph for structured content management. Integrated a robust GraphQL API layer to streamline state management.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="container hidden">
+        <h3 class="section-title gradient-animate">Leadership & Experience</h3>
+        <div class="card glass-card experience-card">
+            <h4>Organizer - CyberCell Tech Club</h4>
+            <p>Coordinated technical workshops, coding events, and hackathons to promote technology learning among students. Mentored juniors in programming and App Developing concepts, fostering collaboration and technical skill development within the college community.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="container hidden">
+        <h3 class="section-title gradient-animate">Let's Connect</h3>
+        <div class="card glass-card contact-wrapper">
+            <form id="contact-form" class="contact-form">
+                <div class="input-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="input-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="How can I help you?" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                
+                <div id="form-success" class="form-success">
+                    <i class="fa-solid fa-circle-check"></i> Message sent successfully!
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo gradient-animate">Samrat Samanta</div>
+            
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/samrat-samanta/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/Samrat-87" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/samrat.samanta.468760" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/samratsamanta45/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:samratsamanta018@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+
+            <p class="copyright">&copy; Samrat Samanta. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
