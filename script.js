@@ -137,3 +137,32 @@ if (contactForm) {
         }, 4000);
     });
 }
+
+// Project download links are provided in the HTML; no automatic button creation.
+
+// Run on DOMContentLoaded so elements exist
+document.addEventListener('DOMContentLoaded', () => {
+    attachDownloadHandlers();
+});
+
+// Attach handlers to `.download-link` anchors.
+// Only anchors with a real `href` (not '#' or empty) will perform their default download/navigation.
+function attachDownloadHandlers() {
+    const links = document.querySelectorAll('#projects .download-link');
+    links.forEach(link => {
+        if (link.dataset.attached === 'true') return; // avoid duplicate
+
+        const href = link.getAttribute('href');
+        if (!href || href === '#' || href.trim() === '') {
+            // disable placeholder links to avoid unexpected behavior
+            link.addEventListener('click', (e) => e.preventDefault());
+            link.classList.add('disabled-link');
+            link.setAttribute('aria-disabled', 'true');
+        } else {
+            // For real links, ensure they open in a new tab so downloads work consistently
+            if (!link.hasAttribute('target')) link.setAttribute('target', '_blank');
+        }
+
+        link.dataset.attached = 'true';
+    });
+}

@@ -250,12 +250,43 @@ a { text-decoration: none; color: inherit; }
 .btn-primary:hover::after { left: 120%; }
 .w-100 { width: 100%; }
 
+/* Download button variant for project cards */
+.download-btn {
+    background: transparent;
+    color: var(--accent-main);
+    border: 1px solid var(--accent-main);
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    display: inline-block;
+    transition: background-color 0.22s ease, color 0.22s ease, transform 0.18s ease;
+}
+.download-btn:hover {
+    background: var(--accent-main);
+    color: #fff;
+    transform: translateY(-4px);
+}
+
+/* Ensure download buttons align consistently at bottom-right of project cards */
+.projects-grid .glass-card .download-btn {
+    margin-top: auto;
+    align-self: flex-start; /* left align */
+    margin-left: 0;
+    margin-bottom: 0.25rem; /* small gap from card bottom */
+}
+
+/* Ensure consistent gap between the last paragraph/text and the download button */
+.projects-grid .glass-card p {
+    margin-bottom: 1rem;
+}
+
 /* Sections */
 section { padding: 120px 0; }
 .about-text { font-size: 1.15rem; color: var(--text-secondary); }
 
 /* Glass Cards */
-.glass-card { background: var(--bg-card); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease; }
+.glass-card { background: var(--bg-card); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem; box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05); transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease; display: flex; flex-direction: column; }
 .skills-grid { display: flex; flex-wrap: wrap; gap: 1rem; }
 .skill-tag { background: var(--bg-card); color: var(--text-primary); padding: 0.8rem 1.6rem; border-radius: 50px; font-weight: 500; border: 1px solid var(--border-color); backdrop-filter: blur(10px); transition: all 0.3s ease; }
 .skill-tag:hover { background: var(--accent-main); color: #fff; border-color: var(--accent-main); transform: translateY(-3px); box-shadow: 0 5px 15px var(--accent-glow); }
