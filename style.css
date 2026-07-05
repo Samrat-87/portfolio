@@ -198,6 +198,16 @@ a { text-decoration: none; color: inherit; }
 #hero h1 { font-size: 5rem; line-height: 1.1; margin-bottom: 1rem; font-weight: 800; letter-spacing: -1.5px; }
 #hero h2 { font-size: 2.2rem; color: var(--text-primary); margin-bottom: 1.5rem; min-height: 52px; font-weight: 400; }
 #hero p { font-size: 1.25rem; color: var(--text-secondary); max-width: 600px; margin-bottom: 2.5rem; }
+.hero-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.hero-links .btn {
+    min-width: 170px;
+}
 
 /* Phone Frame Styles */
 .hero-image-wrapper {
@@ -248,6 +258,19 @@ a { text-decoration: none; color: inherit; }
 .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 15px 25px -10px var(--accent-glow); }
 .btn-primary::after { content: ''; position: absolute; top: -50%; left: -60%; width: 20%; height: 200%; background: rgba(255,255,255,0.3); transform: rotate(45deg); transition: all 0.6s ease; }
 .btn-primary:hover::after { left: 120%; }
+.btn-secondary {
+    background: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+    transition: transform 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-secondary:hover {
+    color: var(--accent-main);
+    border-color: var(--accent-main);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px -16px var(--accent-glow);
+}
 .w-100 { width: 100%; }
 
 /* Download button variant for project cards */
@@ -409,6 +432,13 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border-color); 
     #hero h1 { font-size: 3rem; }
     #hero h2 { font-size: 1.6rem; min-height: 40px; }
     #hero p { font-size: 1.1rem; }
+    .hero-links {
+        justify-content: center;
+        width: 100%;
+    }
+    .hero-links .btn {
+        width: min(100%, 260px);
+    }
     
     /* Make Phone Smaller on Mobile */
     .phone-frame {
