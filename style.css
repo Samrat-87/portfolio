@@ -9,6 +9,8 @@
     --accent-alt: #8b5cf6;
     --accent-gradient: linear-gradient(135deg, var(--accent-main), var(--accent-alt), #ec4899);
     --accent-glow: rgba(59, 130, 246, 0.4);
+    --bg-glow-primary: rgba(59, 130, 246, 0.16);
+    --bg-glow-secondary: rgba(139, 92, 246, 0.14);
     
     --border-color: rgba(255, 255, 255, 0.08);
     --nav-bg: linear-gradient(120deg, rgba(15, 23, 42, 0.38), rgba(17, 24, 39, 0.32));
@@ -32,6 +34,8 @@ body.light-theme {
     --accent-main: #2563eb; 
     --accent-alt: #7c3aed;
     --accent-glow: rgba(37, 99, 235, 0.3);
+    --bg-glow-primary: rgba(37, 99, 235, 0.1);
+    --bg-glow-secondary: rgba(124, 58, 237, 0.08);
     
     --border-color: rgba(0, 0, 0, 0.06);
     --nav-bg: linear-gradient(120deg, rgba(232, 240, 248, 0.5), rgba(225, 236, 248, 0.44));
@@ -58,6 +62,9 @@ html {
 
 body {
     background-color: var(--bg-main);
+    background-image:
+        radial-gradient(circle at 0% 0%, var(--bg-glow-primary), transparent 36%),
+        radial-gradient(circle at 100% 100%, var(--bg-glow-secondary), transparent 42%);
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
