@@ -431,19 +431,34 @@ footer { background: var(--bg-card); border-top: 1px solid var(--border-color); 
         flex-direction: column;
         align-items: center;
     }
-    #hero h1 { font-size: 3rem; }
-    #hero h2 { font-size: 1.6rem; min-height: 40px; }
-    #hero p { font-size: 1.1rem; }
+    #hero h1 {
+        font-size: 2.35rem;
+        line-height: 1.08;
+        letter-spacing: -0.5px;
+        max-width: 100%;
+    }
+    #hero h2 {
+        font-size: 1.35rem;
+        line-height: 1.35;
+        min-height: 40px;
+    }
+    #hero p {
+        max-width: 310px;
+        font-size: 1rem;
+        line-height: 1.65;
+    }
     .hero-links {
         justify-content: center;
         width: 100%;
     }
-    .hero-links .btn {
-        width: min(100%, 260px);
-    }
+    .hero-links .btn { width: min(100%, 220px); }
     
     /* Make Phone Smaller on Mobile */
-    .phone-frame { width: min(78vw, 280px); }
+    .phone-frame {
+        width: min(78vw, 280px);
+        aspect-ratio: 1 / 1;
+    }
+    .profile-img { object-position: center 25%; }
 
     .section-title { font-size: 2rem; margin-bottom: 2rem; }
     section { padding: 80px 0; }
