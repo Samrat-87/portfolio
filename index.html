@@ -3,17 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samrat Samanta | Mobile Application Developer</title>
+    <meta name="description" content="Samrat Samanta is a mobile application developer specializing in React Native, Expo, Firebase, GraphQL, and scalable cross-platform apps.">
+    <meta name="author" content="Samrat Samanta">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Samrat Samanta | Mobile Application Developer">
+    <meta property="og:description" content="Portfolio of Samrat Samanta, a mobile application developer building scalable React Native and Expo applications.">
+    <meta property="og:image" content="image.jpeg">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Samrat Samanta | Mobile Application Developer">
+    <meta name="twitter:description" content="Portfolio of Samrat Samanta, a mobile application developer building scalable cross-platform apps.">
+    <title>Samrat Samanta | React Native & Mobile Application Developer</title>
     <link rel="icon" type="image/x-icon" href="logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Person",
+                "@id": "#samrat-samanta",
+                "name": "Samrat Samanta",
+                "jobTitle": "Mobile Application Developer",
+                "description": "Mobile application developer specializing in React Native, Expo, Firebase, GraphQL, and scalable cross-platform applications.",
+                "image": "image.jpeg",
+                "sameAs": [
+                    "https://www.linkedin.com/in/samrat-samanta/",
+                    "https://github.com/Samrat-87",
+                    "https://www.facebook.com/samrat.samanta.468760",
+                    "https://www.instagram.com/samratsamanta45/"
+                ],
+                "knowsAbout": [
+                    "React Native",
+                    "Expo",
+                    "Firebase",
+                    "GraphQL",
+                    "JavaScript",
+                    "Java",
+                    "MySQL"
+                ]
+            },
+            {
+                "@type": "ProfilePage",
+                "mainEntity": { "@id": "#samrat-samanta" },
+                "name": "Samrat Samanta Portfolio",
+                "description": "Professional portfolio and project showcase for Samrat Samanta."
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "What does Samrat Samanta specialize in?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Samrat specializes in mobile application development with React Native and Expo, with experience in Firebase, GraphQL, MySQL, and scalable cross-platform app architecture."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Which technologies does Samrat use?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "His technical toolkit includes React Native CLI, Expo, Firebase, GraphQL, MySQL, JavaScript, Java, C, HTML, and CSS."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "How can I contact Samrat?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "You can contact Samrat through the form below or email him at samratsamanta018@gmail.com."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 </head>
 <body>
 
     <div class="bg-orb orb-1"></div>
     <div class="bg-orb orb-2"></div>
 
-    <nav id="navbar">
+    <nav id="navbar" aria-label="Primary navigation">
         <div class="nav-content container">
             <a href="#" class="logo">
                 <img src="logo1.png" alt="Logo" class="logo-img">
@@ -41,10 +116,11 @@
         </div>
     </nav>
 
+    <main>
     <header id="hero" class="container hidden">
         <div class="hero-content">
             <h1 class="gradient-animate">Samrat Samanta</h1>
-            <h2 id="typewriter"></h2>
+            <h2 id="typewriter">React Native &amp; Mobile Application Developer</h2>
             <p>Bringing ideas to life through clean code, scalable architecture, and intuitive design.</p>
             <div class="hero-links">
                 <a href="#contact" class="btn btn-primary">Get in Touch</a>
@@ -60,8 +136,8 @@
         </div>
     </header>
 
-    <section id="about" class="container hidden">
-        <h3 class="section-title gradient-animate">About Me</h3>
+    <section id="about" class="container hidden" aria-labelledby="about-title">
+        <h2 id="about-title" class="section-title gradient-animate">About Me</h2>
         <div class="card glass-card">
             <p class="about-text">
                 I am a 3rd-year B.Tech CSE student and a passionate Mobile Application Developer. As a coder and designer, I focus on building scalable mobile ecosystems and bridging technical development with user requirements. My expertise lies in Expo and React Native CLI, coupled with a strong project management background. I thrive in collaborative environments, committed to writing clean, maintainable code while rapidly adopting new frameworks.
@@ -69,8 +145,8 @@
         </div>
     </section>
 
-    <section id="skills" class="container hidden">
-        <h3 class="section-title gradient-animate">Technical Skills</h3>
+    <section id="skills" class="container hidden" aria-labelledby="skills-title">
+        <h2 id="skills-title" class="section-title gradient-animate">Technical Skills</h2>
         <div class="skills-grid">
             <span class="skill-tag">React Native CLI</span>
             <span class="skill-tag">Expo</span>
@@ -84,8 +160,8 @@
         </div>
     </section>
 
-    <section id="projects" class="container">
-        <h3 class="section-title gradient-animate hidden">Featured Projects</h3>
+    <section id="projects" class="container" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="section-title gradient-animate hidden">Featured Projects</h2>
         <div class="projects-grid">
             <div class="card glass-card hidden stagger-0">
                 <h4>QuickNotes</h4>
@@ -114,16 +190,34 @@
         </div>
     </section>
 
-    <section id="experience" class="container hidden">
-        <h3 class="section-title gradient-animate">Leadership & Experience</h3>
+    <section id="experience" class="container hidden" aria-labelledby="experience-title">
+        <h2 id="experience-title" class="section-title gradient-animate">Leadership & Experience</h2>
         <div class="card glass-card experience-card">
             <h4>Student Chief Co-Ordinator - CyberCell Tech Club</h4>
             <p>Coordinated technical workshops, coding events, and hackathons to promote technology learning among students. Mentored juniors in programming and App Developing concepts, fostering collaboration and technical skill development within the college community.</p>
         </div>
     </section>
 
-    <section id="contact" class="container hidden">
-        <h3 class="section-title gradient-animate">Let's Connect</h3>
+    <section id="faq" class="container" aria-labelledby="faq-title">
+        <h2 id="faq-title" class="section-title gradient-animate">Frequently Asked Questions</h2>
+        <div class="card glass-card">
+            <details>
+                <summary>What does Samrat Samanta specialize in?</summary>
+                <p>Samrat specializes in mobile application development with React Native and Expo, with experience in Firebase, GraphQL, MySQL, and scalable cross-platform app architecture.</p>
+            </details>
+            <details>
+                <summary>Which technologies does Samrat use?</summary>
+                <p>His technical toolkit includes React Native CLI, Expo, Firebase, GraphQL, MySQL, JavaScript, Java, C, HTML, and CSS.</p>
+            </details>
+            <details>
+                <summary>How can I contact Samrat?</summary>
+                <p>You can contact Samrat through the form below or email him at samratsamanta018@gmail.com.</p>
+            </details>
+        </div>
+    </section>
+
+    <section id="contact" class="container hidden" aria-labelledby="contact-title">
+        <h2 id="contact-title" class="section-title gradient-animate">Let's Connect</h2>
         <div class="card glass-card contact-wrapper">
             <form id="contact-form" class="contact-form">
                 <div class="input-group">
@@ -146,6 +240,7 @@
             </form>
         </div>
     </section>
+    </main>
 
     <footer>
         <div class="container footer-content">
