@@ -1,6 +1,6 @@
 // --- Elegant Typewriter Effect ---
 const typeWriterElement = document.getElementById('typewriter');
-const texts = ["Mobile Application Developer.", "Coder & Designer.", "React Native Specialist."];
+const texts = ["Software Developer.", "Mobile & Web Developer.", "Cross-Platform Developer."];
 let textIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
